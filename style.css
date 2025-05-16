@@ -175,7 +175,14 @@ section {
 .botao-mapa:hover {
   background-color: #333;
 }
+.slides-mobile {
+  display: none;
+}
 
+/* Mostra slides desktop por padrão */
+.slides-desktop {
+  display: block;
+}
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -256,6 +263,14 @@ section {
 
 .botao-mapa:hover {
   background-color: #333;
+}
+
+.slides-desktop {
+    display: none;
+  }
+
+.slides-mobile {
+    display: block;
 }
 
 }
