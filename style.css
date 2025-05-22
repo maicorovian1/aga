@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
-  background-color: #d3d3d3; /* cinza concreto */
+  background-color: #d3d3d3;
   color: #333;
 }
 
@@ -50,26 +50,23 @@ body {
 /* Slideshow */
 .slideshow {
   position: relative;
-  top: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-.slides {
+.slides-desktop, .slides-mobile {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 .slide {
   position: absolute;
-  top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  left: 0;
   transition: opacity 1s ease-in-out;
 }
 
@@ -78,46 +75,6 @@ body {
 }
 
 .prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.cabecalho-carrossel {
-  position: relative;
-  width: 100%;
-  height: 40vh;
-  overflow: hidden;
-  z-index: 5;
-}
-
-.slides-desktop,
-.slides-mobile {
-  display: flex;
-}
-
-.slides-desktop img,
-.slides-mobile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-  position: absolute;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.slide.active {
-  display: block;
-}
-
-.prev,
-.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -138,6 +95,7 @@ section {
   padding: 60px 20px;
   text-align: center;
 }
+
 .produtos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -171,6 +129,8 @@ section {
   transform: scale(1.03);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Contato */
 .contato {
   text-align: center;
   padding: 60px 20px;
@@ -220,11 +180,12 @@ section {
 .botao-mapa:hover {
   background-color: #333;
 }
+
+/* Mobile */
 .slides-mobile {
   display: none;
 }
 
-/* Mostra slides desktop por padrão */
 .slides-desktop {
   display: block;
 }
@@ -240,8 +201,6 @@ section {
     right: 0;
     width: 200px;
   }
-  .slides-desktop { display: flex; }
-  .slides-mobile { display: none; }
 
   .menu.show {
     display: flex;
@@ -250,10 +209,19 @@ section {
   .menu-toggle {
     display: block;
   }
-    .produtos-grid {
-    overflow-x: auto;
+
+  .slides-desktop {
+    display: none;
+  }
+
+  .slides-mobile {
+    display: block;
+  }
+
+  .produtos-grid {
     display: block;
     white-space: nowrap;
+    overflow-x: auto;
   }
 
   .produto {
@@ -262,95 +230,4 @@ section {
     margin-right: 20px;
     vertical-align: top;
   }
-  .contato {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #e0e0e0;
-}
-
-.contato h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.contato p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  font-weight: 500;
-}
-
-.botoes-contato {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.botoes-contato a {
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-size: 1em;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-.botao-whatsapp {
-  background-color: #25d366;
-}
-
-.botao-whatsapp:hover {
-  background-color: #1ebe5d;
-}
-
-.botao-mapa {
-  background-color: #555;
-}
-
-.botao-mapa:hover {
-  background-color: #333;
-}
-
-.slides-desktop {
-    display: none;
-  }
-
-.slides-mobile {
-    display: block;
-}
-.produtos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas sempre */
-  gap: 20px;
-  padding: 20px;
-}
-
-.produto {
-  text-align: center;
-  background-color: #f4f4f4;
-  padding: 10px;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.produto img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-.produto p {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
-}
-
-.produto:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 }
