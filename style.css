@@ -96,6 +96,7 @@ section {
   text-align: center;
 }
 
+/* Produtos Grid - comportamento padrão (desktop) */
 .produtos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -181,7 +182,7 @@ section {
   background-color: #333;
 }
 
-/* Mobile */
+/* Slideshow responsivo */
 .slides-mobile {
   display: none;
 }
@@ -190,8 +191,15 @@ section {
   display: block;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
+/* Tablets - 2 colunas */
+@media (max-width: 992px) {
+  .produtos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile - 1 coluna */
+@media (max-width: 576px) {
   .menu {
     display: none;
     flex-direction: column;
@@ -219,15 +227,6 @@ section {
   }
 
   .produtos-grid {
-    display: block;
-    white-space: nowrap;
-    overflow-x: auto;
-  }
-
-  .produto {
-    display: inline-block;
-    width: 300px;
-    margin-right: 20px;
-    vertical-align: top;
+    grid-template-columns: 1fr;
   }
 }
