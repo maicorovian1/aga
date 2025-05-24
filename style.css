@@ -133,20 +133,32 @@ section {
 
 /* Contato */
 .contato {
-  text-align: center;
+  position: relative;
+  background-image: url('img/contato.png'); /* substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  color: white;
   padding: 60px 20px;
-  background-color: #e0e0e0;
+  text-align: center;
 }
 
-.contato h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+.contato .overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* camada escura */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.contato p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  font-weight: 500;
+.info-empresa {
+  margin: 30px 0;
+  text-align: left;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.info-empresa p {
+  margin: 8px 0;
 }
 
 .botoes-contato {
@@ -154,9 +166,11 @@ section {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.botoes-contato a {
+.botao-whatsapp,
+.botao-mapa {
   padding: 12px 24px;
   border-radius: 5px;
   font-size: 1em;
