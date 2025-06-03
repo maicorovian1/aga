@@ -4,164 +4,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-
-  <title>- P U L S E -</title>
+  <title>Venda de Pavers</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-
-
 </head>
 <body>
   <nav class="navbar">
-    <img src="img/logo.png" alt="Logo" class="logo" />
+    <img src="img/aga.png" alt="Logo" class="logo" />
     <div id="menu-toggle" class="menu-toggle">☰</div>
     <ul class="menu" id="menu">
-      
       <li><a href="#">Início</a></li>
-      <li><a href="#produtos">Serviços</a></li>
-      
+      <li><a href="#produtos">Produtos</a></li>
       <li><a href="#contato">Contato</a></li>
-      
-     
-
     </ul>
   </nav>
-<!-- atualizou -->
+
   <div class="slideshow">
     <div class="slides slides-desktop">
-      <img src="img/desktop/foto1.jpg" class="slide active" />
-      <img src="img/desktop/foto2.png" class="slide" />
-      <img src="img/desktop/foto3.png" class="slide" />
-      <img src="img/desktop/foto4.jpg" class="slide" />
-      <img src="img/desktop/foto5.png" class="slide" />
-      <img src="img/desktop/foto6.jpg" class="slide" />
+      <img src="img/foto1.jpg" class="slide active" />
+      <img src="img/foto2.jpg" class="slide" />
+      <img src="img/foto3.jpg" class="slide" />
+      <img src="img/foto4.jpg" class="slide" />
     </div>
-
     <div class="slides slides-mobile">
-      <img src="img/mobile/mobile1.jpg" class="slide active" />
-      <img src="img/mobile/mobile2.png" class="slide" />
-      <img src="img/mobile/mobile3.png" class="slide" />
-      <img src="img/mobile/mobile4.jpg" class="slide" />
-      <img src="img/mobile/mobile5.png" class="slide" />
-      <img src="img/mobile/mobile6.jpg" class="slide" />
+      <img src="img/mobile1.png" class="slide active" />
+      <img src="img/mobile2.png" class="slide" />
+      <img src="img/mobile3.png" class="slide" />
+      
     </div>
-
-    
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
   </div>
-  
-
 
   <section id="produtos">
-    <h2 class="titulo-manu">Nossos Serviços</h2>
-   
+    <h2>Nossos Produtos</h2>
+    <p>Confira algumas das opções disponíveis:</p>
     <div class="produtos-grid">
       <div class="produto">
-        <img src="img/produtos/produto1.jpg" alt="Produto 1" />
-      <h5 class="titulo-manu">Naturalidade e segurança</h5>
+        <img src="img/produto1.jpg" alt="Produto 1" />
+        <p>Pavers</p>
+        <p>Excelente opção para pavimentação de calçadas,</p>
+        <p> estacionamentos, áreas externas e jardins. </p>
       </div>
       <div class="produto">
-        <img src="img/produtos/produto2.jpg" alt="Produto 2" />
-       <h5 class="titulo-manu">Rugas? Só as do travesseiro!</h5>
+        <img src="img/produto2.jpg" alt="Produto 2" />
+        <p>Blocos</p>
+        <p>Ideal para paredes estruturais ou de vedação, oferece excelente desempenho térmico e acústico, além de agilidade na execução da obra.</p>
       </div>
       <div class="produto">
-        <img src="img/produtos/produto3.jpg" alt="Produto 3" />
-        <h5 class="titulo-manu">Pele rejuvenescida</h5>
+        <img src="img/produto3.jpg" alt="Produto 3" />
+        <p>Paver Drenante</p>
+        <p>Desenvolvido com espaçamentos que permitem a infiltração da água no solo, contribui para o controle de enchentes e preservação ambiental.</p>
       </div>
       <div class="produto">
-        <img src="img/produtos/produto4.jpg" alt="Produto 4" />
-       <h5 class="titulo-manu">Firme, jovem e natural!</h5>
+        <img src="img/produto4.jpg" alt="Produto 4" />
+        <p>Piso Tátil</p>
+        <p>Desenvolvido para orientar pessoas com deficiência visual, ele possui superfície em relevo que indica direções ou alerta sobre obstáculos. </p>
       </div>
       <div class="produto">
-        <img src="img/produtos/produto5.jpg" alt="Produto 5" />
-       <h5 class="titulo-manu">Valorize sua expressão</h5>
+        <img src="img/produto5.jpeg" alt="Produto 5" />
+        <p>Canaletas</p>
+        <p>Resistentes e duráveis, são ideais para obras de drenagem, meio-fio com sarjeta, contenção de encostas e projetos de infraestrutura urbana ou rural.</p>
       </div>
       <div class="produto">
-        <img src="img/produtos/produto6.jpg" alt="Produto 6" />
-        <h5 class="titulo-manu">Hidratação profunda e luminosidade</h5>
+        <img src="img/produto6.jpg" alt="Produto 6" />
+        <p>Paver Unistein</p>
+        <p>Seu formato intertravado garante maior estabilidade e durabilidade, sendo perfeito para calçadas, estacionamentos, vias de tráfego leve e áreas públicas.</p>
       </div>
     </div>
   </section>
-  
-  
-<!-- CONTATO -->
-<section class="contato-section" id="contato">
-  <h2 class="titulo-manu">Entre em Contato</h2>
-  <div class="contato-conteudo">
-    
-    <!-- INFORMAÇÕES DE CONTATO -->
-    <div class="contato-info">
-      <div class="info-item">
-        <i class="fa fa-map-marker"></i>
-        <span>Rua das Nogueiras - Nº655 - CENTRO - Sinop - MT</span>
-      </div>
-      <div class="info-item">
-        <i class="fa fa-phone"></i>
-        <span>(66) 99682-3933</span>
-      </div>
-      <div class="info-item">
-        <i class="fa fa-envelope"></i>
-        <span>pulsefotodepil@gmail.com</span>
-      </div>
 
-      <!-- BOTÕES DE CONTATO -->
-      <div class="botoes-contato">
-      
-        <a href="https://wa.me/+5566996823933?text=Olá%2C%20seja%20bem-vindo%21%20Como%20podemos%20ajudar%3F" target="_blank">
-          <button style="background-color: #25D366; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer;">
-            Fale conosco no WhatsApp
-          </button>
-        </a>
-        <a href="https://www.google.com/maps/place/Sinop,+MT" class="botao-contato" target="_blank">
-          <i class="fa fa-map"></i> Ver Mapa
-        </a>
-      </div>
+  <section id="contato" class="contato">
+  <div class="overlay">
+    <h1>Entre em Contato</h1>
+    <p>Solicite seu orçamento ou faça uma visita.</p>
+
+    <div class="info-empresa">
+      <p><strong>AGA Artefatos de Concreto</strong></p>
+      <p>Especializada na fabricação de artefatos de concreto com qualidade, resistência e durabilidade.</p>
+      <p><strong>Missão:</strong> Oferecer soluções em concreto que contribuam para obras seguras e eficientes.</p>
+      <p><strong>Visão:</strong> Ser referência regional em qualidade e inovação no segmento de artefatos de concreto.</p>
+      <p><strong>Valores:</strong> Comprometimento, qualidade, inovação e respeito ao cliente.</p>
+      <p><strong>Endereço:</strong> Av. das Indústrias, 456 – Sinop, MT</p>
     </div>
 
-    <!-- MAPA EMBUTIDO -->
-    <div class="contato-mapa">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.355434472225!2d-55.1610323!3d-11.8607969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939da5d88e360ebf%3A0x89aef2a9fa496b42!2sSinop%2C%20MT!5e0!3m2!1spt-BR!2sbr!4v1717199999999"
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <div class="botoes-contato">
+      <a href="https://wa.me/seunumerowhatsapp" target="_blank" class="botao-whatsapp">WhatsApp</a>
+      <a href="https://goo.gl/maps/localizacao" target="_blank" class="botao-mapa">Como Chegar</a>
     </div>
   </div>
-</section>
+  </section>
 
-<section id="horarios" class="horarios-section">
-  <h5 class="titulo-manu">Horários de Atendimento</h5>
-  <div class="horarios-box">
-    <div class="horario-item">
-      <i class="fa-regular fa-clock"></i>
-      <div>
-        <h4>Segunda à Sexta</h4>
-        <p>08:00 às 18:00</p>
-      </div>
-    </div>
-    <div class="horario-item">
-     <i class="fa-regular fa-clock"></i>
-      <div>
-        <h4>Sábados</h4>
-        <p>08:00 às 11:30</p>
-      </div>
-    </div>
-  </div>
-</section>
-<footer class="rodape-site">
-  <p>Desenvolvido por <a href="https://wa.me/+5566999750425" target="_blank">Maico Rovian</a></p>
-</footer>
-<a href="https://wa.me/+5566996823933" class="whatsapp-fixo" target="_blank">
-  <i class="fa fa-whatsapp"></i>
-</a>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
