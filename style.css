@@ -8,7 +8,7 @@
 body {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
-  background-color: #d3d3d3;
+  background-color: #ffffff;
   color: #333;
 }
 
@@ -17,15 +17,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #444;
-  padding: 10px 20px;
+  background-color: #f2ecd7;
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
 .logo {
-  height: 40px;
+  height: 50px;
 }
 
 .menu {
@@ -35,7 +34,7 @@ body {
 }
 
 .menu li a {
-  color: white;
+  color: rgb(162, 107, 5);
   text-decoration: none;
   font-weight: bold;
 }
@@ -51,18 +50,25 @@ body {
 .slideshow {
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: auto;
   overflow: hidden;
 }
 
-.slides-desktop, .slides-mobile {
+.slides-mobile {
+  display: none;
+}
+
+.slides-desktop,
+.slides-mobile {
   position: relative;
   width: 100%;
-  height: 100%;
+  padding-top: 40%;
 }
 
 .slide {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -74,7 +80,8 @@ body {
   opacity: 1;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -87,8 +94,13 @@ body {
   border-radius: 50%;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
 
 /* Seções */
 section {
@@ -96,142 +108,174 @@ section {
   text-align: center;
 }
 
-/* Produtos Grid - comportamento padrão (desktop) */
+/* Produtos Grid */
 .produtos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 20px 0;
 }
 
-.produto {
-  text-align: center;
-  background-color: #f4f4f4;
-  padding: 10px;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
+/* Produtos */
 .produto img {
   width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
-.produto p {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #333;
+.titulo-manu {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #a26b05;
 }
 
-.produto:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* CONTATO */
+.contato-section {
+  background-color: #f9f9f9;
 }
 
-/* Contato */
-.contato {
-  position: relative;
-  background-image: url('img/contato.png'); /* substitua pelo caminho da sua imagem */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.contato .overlay {
-  background-color: rgba(0, 0, 0, 0.8); /* camada escura */
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 900px;
+.contato-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.info-empresa {
-  margin: 30px 0;
+.contato-info {
+  flex: 1;
   text-align: left;
-  line-height: 1.6;
-  color: #fff;
 }
 
-.info-empresa p {
-  margin: 8px 0;
+.info-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
 }
 
 .botoes-contato {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
-  margin-top: 30px;
 }
 
-.botao-whatsapp,
-.botao-mapa {
-  padding: 12px 24px;
+.botao-contato {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1705a2;
+  color: white;
+  text-decoration: none;
   border-radius: 5px;
-  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.botao-contato:hover {
+  background-color: #8b5803;
+}
+
+.contato-mapa {
+  flex: 1;
+  min-height: 300px;
+  border: 2px solid #059e0a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.botao-whatsapp-fixo {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: #b7f0cc;
+  background-image: url('img/whatsico.png'); /* troque pelo caminho correto */
+  background-repeat: no-repeat;
+  background-position: 12px center;
+  background-size: 38px 38px;
+  color: white;
+  padding: 12px 20px 12px 44px; /* espaço à esquerda para o ícone */
+  border-radius: 50px; /* deixa arredondado */
+  font-size:29px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
+  z-index: 1000;
 }
 
-.botao-whatsapp {
-  background-color: #25d366;
-}
-
-.botao-whatsapp:hover {
+.botao-whatsapp-fixo:hover {
   background-color: #1ebe5d;
 }
 
-.botao-mapa {
-  background-color: #555;
+/* HORÁRIOS */
+.horarios-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.botao-mapa:hover {
-  background-color: #333;
+.horarios-box {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
 }
 
-/* Slideshow responsivo */
-.slides-mobile {
-  display: none;
+.horario-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.slides-desktop {
-  display: block;
+.horario-item i {
+  font-size: 24px;
+  color: #a26b05;
 }
 
-/* Tablets - 2 colunas */
-@media (max-width: 992px) {
-  .produtos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* RODAPÉ */
+.rodape-site {
+  background-color: #f2ecd7;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
 }
 
-/* Mobile - 1 coluna */
-@media (max-width: 576px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background-color: #444;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-  }
+.rodape-site a {
+  text-decoration: none;
+  color: #a26b05;
+  font-weight: bold;
+}
+.swiper-slide.testimonial {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titulo-manu {
+  font-family: 'Raleway', sans-serif;
 
-  .menu.show {
-    display: flex;
-  }
+  color: #8b7203; /* Aqui você altera a cor que quiser */
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.titulo-produtos {
+  font-family: 'Raleway', sans-serif;
+  color: #302701; /* Aqui você altera a cor que quiser */
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-  .menu-toggle {
-    display: block;
-  }
-
+/* =================== RESPONSIVO =================== */
+@media (max-width: 768px) {
   .slides-desktop {
     display: none;
   }
@@ -239,8 +283,55 @@ section {
   .slides-mobile {
     display: block;
   }
+  .titulo-produtos {
+    font-size: 1rem; /* reduz o tamanho da fonte no mobile */
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f2ecd7;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    z-index: 1000;
+  }
+
+  .menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-right: 20px;
+  }
 
   .produtos-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CONTATO no mobile */
+  .contato-conteudo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contato-info {
+    text-align: center;
+  }
+
+  .botoes-contato {
+    justify-content: center;
+  }
+
+  .contato-mapa {
+    height: 250px;
+  }
+
+  /* Horários em coluna */
+  .horarios-box {
+    flex-direction: column;
+    gap: 20px;
   }
 }
